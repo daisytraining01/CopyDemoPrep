@@ -4,15 +4,12 @@ Feature: Demo Bank Feature
   Background: login
     Given Login to "http://dbankdemo.com/home"
 
-  #Scenario: Transfer the amount between the Savings Accounts
-    #And Enter the username "jayaramanbala86@gmail.com" and password "DBdemo@123"
-    
-    #And Login using the User credentials
-	
-	#	|TC_ID|TC001|
-    
-    #Then Check the balance of "Account-1" Savings Account
-	#When Transfer "2.00" from "Account-1" Acc to "Account-2" Acc
+  Scenario: Transfer the amount between the Savings Accounts
+    And Enter the username "jayaramanbala86@gmail.com" and password "DBdemo@123"
+    And Login using the User credentials
+		|TC_ID|TC001|
+    Then Check the balance of "Account-1" Savings Account
+	When Transfer "2.00" from "Account-1" Acc to "Account-2" Acc
 
 
  Scenario: Verify the transaction status in the Savings Accounts
